@@ -64,13 +64,13 @@ public class frmRecorrido extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         if (!txtRecorrido.getText().isEmpty()) {
-            if (Integer.parseInt(txtRecorrido.getText()) > 0) {
+            if (Integer.parseInt(txtRecorrido.getText()) > 0 && Integer.parseInt(txtRecorrido.getText()) <= 100) {
                 recorrido = Integer.parseInt(txtRecorrido.getText()) * 100;
                 frmConductor vConductor = new frmConductor();
                 vConductor.setVisible(true);
                 this.setVisible(false);
             }else{
-                JOptionPane.showMessageDialog(null, "El valor ingresado debe de ser mayor a cero");
+                JOptionPane.showMessageDialog(null, "El valor ingresado debe debe estar entre cero y cien kilometros");
             }
         } else {
             JOptionPane.showMessageDialog(null, "El campo no puede estar vacio");
